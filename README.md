@@ -6,8 +6,8 @@
 <h2>Techs</h2>
   <ul>
     <li><a href="https://www.java.com">Java</a> </li>
-    <li><a href="[spring.io](https://spring.io)">Spring</a></li>
-    <li><a href="https://www.h2database.com"></a></li>
+    <li><a href="https://spring.io">Spring</a></li>
+    <li><a href="https://www.h2database.com">H2 Database</a></li>
   </ul>
 </div>
 
