@@ -21,7 +21,7 @@
   </ul>
   
 ## How use?
-- Use <a href="https://www.postman.com/downloads/" target="_blanck">Postman</a> to make better use of the API's features.
+- Use <a href="https://www.postman.com/downloads/" target="blanck">Postman</a> to make better use of the API's features.
 ``` bash 
   # Clone project
   $ git clone git@github.com:victordantas1/workshop-springboot3-jpa.git
