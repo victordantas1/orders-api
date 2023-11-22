@@ -51,7 +51,7 @@
 #### DELETE
   - /user: delete a user
 
-## Future implementations
+## Future implementations ⌨️
   - CRUD of other entities
   - Anothers endpoints to find with others atributes
   - A new project using hateos will be developed using this as a base
