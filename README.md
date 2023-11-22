@@ -38,8 +38,19 @@
  ````
 -  The application will run at http://localhost:8080.
 ### Endpoints
-  - /users: 
+#### GET
+  - /users: find a users list
+  - /orders: find a orders list
+  - /products: find a products list
+  - /categories: find a categories list
+#### POST
+  - /users: add a user
+#### PUT
+  - /users: update a user
+#### DELETE
+  - /user: delete a user
 
-    
-    
- 
+## Future implementations
+  - CRUD of other entities
+  - Anothers endpoints to find with others atributes
+  - A new project using hateos will be developed using this as a base
