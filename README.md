@@ -37,6 +37,8 @@
    $ mvn spring-boot:run
  ````
 -  The application will run at http://localhost:8080.
+### Endpoints
+  - /users: 
 
     
     
