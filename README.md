@@ -25,7 +25,7 @@
 - Use <a target="_blank" href="https://www.postman.com/downloads/">Postman</a> to make better use of the API's features.
 ``` bash 
   # Clone project
-  $ git clone git@github.com:victordantas1/workshop-springboot3-jpa.git
+  $ git clone git@github.com:victordantas1/orders-api.git
 ````
 
  ``` bash 
