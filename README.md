@@ -1,6 +1,6 @@
-# Orders Service API 📦
+# Orders Service API RESTful📦
 ## About 📕
-  <p>This project is an ordering service API, it can be used for food delivery and online product sales.</p>
+  <p>This project is an ordering service API, it can be used for food delivery and online product sales. This project was developed with instructions from Nelio Alves' Java and Spring Boot course, in order to exercise and improve the skills acquired during the course.</p>
 
 ## Features 🛠️
   -  Find, delete, post and update service users
