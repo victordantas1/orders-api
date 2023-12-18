@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.educandoweb.course.entities.dtos.UserDTO;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Entity;
@@ -41,6 +42,14 @@ public class User implements Serializable {
 		this.phone = phone;
 		this.password = password;
 	}
+
+	public User(UserDTO user) {
+		this.name = user.name();
+		this.email = user.email();
+		this.phone = user.phone();
+		this.password = user.password();
+	}
+
 
 	public Long getId() {
 		return id;

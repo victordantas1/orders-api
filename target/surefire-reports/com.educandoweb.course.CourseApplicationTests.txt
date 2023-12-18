@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.educandoweb.course.CourseApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.676 s - in com.educandoweb.course.CourseApplicationTests

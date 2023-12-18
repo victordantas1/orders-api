@@ -3,6 +3,7 @@ package com.educandoweb.course.resources;
 import java.net.URI;
 import java.util.List;
 
+import com.educandoweb.course.entities.dtos.UserDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -38,11 +39,11 @@ public class UserResource {
 	}
 	
 	@PostMapping
-	public ResponseEntity<User> insert(@RequestBody User obj) {
-		obj = service.insert(obj);
+	public ResponseEntity<User> insert(@RequestBody UserDTO obj) {
+		User user = service.insert(obj);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
-				.buildAndExpand(obj.getId()).toUri();
-		return ResponseEntity.created(uri).body(obj);
+				.buildAndExpand(user.getId()).toUri();
+		return ResponseEntity.created(uri).body(user);
 	}
 	
 	@DeleteMapping(value = "/{id}")
@@ -50,10 +51,10 @@ public class UserResource {
 		service.delete(id);
 		return ResponseEntity.noContent().build();
 	}
-	
+
 	@PutMapping(value = "/{id}")
-	public ResponseEntity<User> update(@PathVariable Long id, @RequestBody User obj) {
-		obj = service.update(id, obj);
-		return ResponseEntity.ok().body(obj);
+	public ResponseEntity<User> update(@PathVariable Long id, @RequestBody UserDTO obj) {
+		User user = service.update(id, obj);
+		return ResponseEntity.ok().body(user);
 	}
 }

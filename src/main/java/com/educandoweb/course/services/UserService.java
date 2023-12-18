@@ -3,6 +3,8 @@ package com.educandoweb.course.services;
 import java.util.List;
 import java.util.Optional;
 
+import com.educandoweb.course.entities.dtos.UserDTO;
+import com.educandoweb.course.services.exceptions.ResourceAlreadyExistsException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -29,9 +31,16 @@ public class UserService {
 		Optional<User> obj = repository.findById(id);
 		return obj.orElseThrow(() -> new ResourceNotFoundException(id));
 	}
-	
-	public User insert(User obj) {
-		return repository.save(obj);
+
+	public User insert(UserDTO obj) {
+		Optional<User> user = repository.findByEmail(obj.email());
+		if(user.isPresent()) {
+			throw new ResourceAlreadyExistsException(user.get().getId());
+		}
+		else {
+			User userValid = new User(obj);
+			return repository.save(userValid);
+		}
 	}
 	
 	public void delete(Long id) {
@@ -43,20 +52,20 @@ public class UserService {
 			throw new DatabaseException(e.getMessage());
 		}
 	}
-	
-	public User update(Long id, User obj) {
+
+	public User update(Long id, UserDTO obj) {
 		try {
 			User entity = repository.getReferenceById(id);
 			updateData(entity, obj);
 			return repository.save(entity);
 		} catch (EntityNotFoundException e) {
 			throw new ResourceNotFoundException(id);
-		}	
+		}
 	}
 
-	private void updateData(User entity, User obj) {
-		entity.setName(obj.getName());
-		entity.setEmail(obj.getEmail());
-		entity.setPhone(obj.getPhone());
+	private void updateData(User entity, UserDTO obj) {
+		entity.setName(obj.name());
+		entity.setEmail(obj.email());
+		entity.setPhone(obj.phone());
 	}
 }
