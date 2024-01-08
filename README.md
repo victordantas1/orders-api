@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <div> 
   <h1>Orders Service API</h1>
   <div display="ïnline_block"> <h2>About 📕</h2>
